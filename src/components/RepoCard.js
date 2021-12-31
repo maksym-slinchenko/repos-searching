@@ -23,7 +23,9 @@ export default function RepoCard({
     const preFavoritesRepos = JSON.parse(
       localStorage.getItem('favoritesRepos'),
     );
-    isItemInArr(preFavoritesRepos, id, setIsFavorite);
+    if (preFavoritesRepos) {
+      isItemInArr(preFavoritesRepos, id, setIsFavorite);
+    }
   }, []);
 
   return (

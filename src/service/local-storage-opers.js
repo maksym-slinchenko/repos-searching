@@ -14,11 +14,8 @@ const arrayToggleItem = (arr, item, setMethod) => {
   }
 };
 
-export const handleToggleIsFavorite = async (
-  id,
-  setMethod,
-) => {
-  const preFavoritesRepos = await JSON.parse(
+export const handleToggleIsFavorite = (id, setMethod) => {
+  const preFavoritesRepos = JSON.parse(
     localStorage.getItem('favoritesRepos'),
   );
   if (preFavoritesRepos) {
